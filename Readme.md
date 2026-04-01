@@ -1,5 +1,10 @@
 # Mini Diagnosis API
 
+```md
+🚀 Live Demo: https://mini-diagnosis-api.onrender.com
+
+```
+
 A simple backend system that analyzes user symptoms and returns possible medical conditions with probability scores. It also stores all diagnosis history using MongoDB.
 
 ---
@@ -70,6 +75,62 @@ A simple backend system that analyzes user symptoms and returns possible medical
     ],
     "createdAt": "2026-04-01T17:01:36.829Z",
     "__v": 0
+  }
+]
+```
+
+##  API Preview
+
+### 🔹 Diagnose API
+![Diagnose API](assets/Diagnose.png)
+
+### 🔹 History API
+![History API](assets/history.png)
+
+
+##  Live API
+
+The API is deployed and accessible at:
+
+ https://mini-diagnosis-api.onrender.com
+
+---
+
+##  Test the API
+
+### 🔹 Diagnose Endpoint
+**POST**  
+https://mini-diagnosis-api.onrender.com/api/diagnose  
+
+**Body:**
+```json
+{
+  "symptoms": "fever, headache, fatigue"
+}
+```
+
+### 🔹 Get Diagnosis History
+
+**GET**  
+https://mini-diagnosis-api.onrender.com/api/history  
+
+**Description:**  
+Fetch all previously stored diagnosis records from the database.
+
+---
+
+**Response:**
+```json
+[
+  {
+    "_id": "6612a1b2c3d4e5f678901234",
+    "symptoms": "fever, headache, fatigue",
+    "results": [
+      { "condition": "Flu", "probability": "70%" },
+      { "condition": "Viral Infection", "probability": "60%" },
+      { "condition": "Anemia", "probability": "50%" }
+    ],
+    "createdAt": "2026-04-01T10:30:00.000Z"
   }
 ]
 ```
