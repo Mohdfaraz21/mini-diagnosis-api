@@ -15,7 +15,7 @@ app.use("/api", require("./routes/diagnoseRoutes"));
 app.use("/api", require("./routes/historyRoutes"));
 
 app.get("/", (req, res) => {
-  res.send("API Running...");
+  res.send("Mini Diagnosis API is running 🚀");
 });
 
 const PORT = process.env.PORT || 5000;
